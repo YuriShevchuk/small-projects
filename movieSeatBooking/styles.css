@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+/* line 3, D:/Documents/IT/works/smallprojects/movieSeatBooking/scss/styles.scss */
+* {
+  box-sizing: border-box;
+}
+
+/* line 7, D:/Documents/IT/works/smallprojects/movieSeatBooking/scss/styles.scss */
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #242333;
+  color: #fff;
+  min-height: 100vh;
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+}
+
+/* line 19, D:/Documents/IT/works/smallprojects/movieSeatBooking/scss/styles.scss */
+.movie-container {
+  margin: 20px 0;
+}
+
+/* line 22, D:/Documents/IT/works/smallprojects/movieSeatBooking/scss/styles.scss */
+.movie-container select {
+  border: 0;
+  font-size: 14px;
+  appearance: none;
+  margin-left: 10px;
+  border-radius: 5px;
+  background-color: #fff;
+  padding: 5px 15px 5px 15px;
+}
+
+/* line 33, D:/Documents/IT/works/smallprojects/movieSeatBooking/scss/styles.scss */
+.container {
+  perspective: 1000px;
+  margin-bottom: 30px;
+}
+
+/* line 38, D:/Documents/IT/works/smallprojects/movieSeatBooking/scss/styles.scss */
+.seat {
+  background-color: #444451;
+  height: 12px;
+  width: 15px;
+  margin: 3px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+/* line 46, D:/Documents/IT/works/smallprojects/movieSeatBooking/scss/styles.scss */
+.seat.selected {
+  background-color: #6feaf6;
+}
+
+/* line 50, D:/Documents/IT/works/smallprojects/movieSeatBooking/scss/styles.scss */
+.seat.occupied {
+  background-color: #fff;
+}
+
+/* line 54, D:/Documents/IT/works/smallprojects/movieSeatBooking/scss/styles.scss */
+.seat:nth-of-type(2) {
+  margin-right: 18px;
+}
+
+/* line 58, D:/Documents/IT/works/smallprojects/movieSeatBooking/scss/styles.scss */
+.seat:nth-last-of-type(3) {
+  margin-right: 18px;
+}
+
+/* line 62, D:/Documents/IT/works/smallprojects/movieSeatBooking/scss/styles.scss */
+.seat:not(.occupied):hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+/* line 67, D:/Documents/IT/works/smallprojects/movieSeatBooking/scss/styles.scss */
+.seat:not(.occupied):hover {
+  cursor: default;
+  transform: scale(1.2);
+}
+
+/* line 73, D:/Documents/IT/works/smallprojects/movieSeatBooking/scss/styles.scss */
+.showcase {
+  display: flex;
+  justify-content: space-between;
+  background: rgba(0, 0, 0, 0.1);
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #777;
+  list-style-type: none;
+}
+
+/* line 74, D:/Documents/IT/works/smallprojects/movieSeatBooking/scss/styles.scss */
+.showcase .seat:not(.occupied):hover {
+  cursor: default;
+  transform: scale(1);
+}
+
+/* line 87, D:/Documents/IT/works/smallprojects/movieSeatBooking/scss/styles.scss */
+.showcase li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;
+}
+
+/* line 92, D:/Documents/IT/works/smallprojects/movieSeatBooking/scss/styles.scss */
+.showcase li small {
+  margin-left: 2px;
+}
+
+/* line 99, D:/Documents/IT/works/smallprojects/movieSeatBooking/scss/styles.scss */
+.row {
+  display: flex;
+}
+
+/* line 103, D:/Documents/IT/works/smallprojects/movieSeatBooking/scss/styles.scss */
+.screen {
+  background-color: #fff;
+  height: 70px;
+  width: 100%;
+  margin: 15px 0;
+  transform: rotateX(-45deg);
+  box-shadow: 0 3px 10px rgba(255, 255, 255, 0.7);
+}
+
+/* line 113, D:/Documents/IT/works/smallprojects/movieSeatBooking/scss/styles.scss */
+p.text {
+  margin: 5px 0;
+}
+
+/* line 115, D:/Documents/IT/works/smallprojects/movieSeatBooking/scss/styles.scss */
+p.text span {
+  color: #6feaf6;
+}
+
+/*# sourceMappingURL=styles.css.map */
