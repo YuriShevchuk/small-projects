@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
-$modal-duration: 1s;
+$modal-duration: .8s;
 $primary-color: #30336b;
 $secondary-color: #be2edd;
 %submit {
@@ -16,8 +16,13 @@ $secondary-color: #be2edd;
 }
 
 body {
+    overflow-x: hidden;
     font-family: 'Lato', sans-serif;
     margin: 0;
+    transition: transform 0.3s ease;
+    &.show-nav {
+        transform: translateX(200px);
+    }
 }
 
 nav {
@@ -28,8 +33,8 @@ nav {
     top: 0;
     left: 0;
     width: 200px;
-    height: 100vh;
-    z-index: 5;
+    height: 100%;
+    z-index: 2;
     transform: translateX(-100%);
     .logo {
         padding: 30px 0;
@@ -108,12 +113,18 @@ button {
 
 .modal-container {
     position: fixed;
+    z-index: 6;
+
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     background-color: rgba(0,0,0, 0.6);
     display: none;
+    &.show-modal {
+        display: block;
+        opacity: 1;
+    }
 }
 
 .modal {
@@ -127,6 +138,7 @@ button {
     transform: translate(-50%, -50%);
     max-width: 100%;
     width: 400px;
+    animation: modalopen $modal-duration;
 }
 
 .modal-header {
@@ -135,7 +147,6 @@ button {
     padding: 15px;
     h3 {
         margin: 0;
-        border-bottom: 1px solid #333;
     }
 }
 
@@ -163,4 +174,13 @@ button {
     position: absolute;
     right: 0;
     top: 5px;
+}
+
+@keyframes modalopen {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
